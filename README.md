@@ -24,14 +24,16 @@ To install angular material using Angular CLI:
 ```
 ng add @angular/material
 ```
-This will automatically detects which angular material your application is compatible with.
 
 ![Screenshot 2024-06-14 054556](https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/images/Screenshot%202024-06-14%20054556.png)
 
 
+This will automatically detects which angular material your application is compatible with.
+
+
 
 ### 3. Download Palette provided or Create Your Own
-To download/copy Manulife's palette.scss go (here)[https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/shared/_palette.scss] or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
+To download/copy Manulife's palette.scss go [here](https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/shared/_palette.scss) or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
 
 
 ### 4. Implement Basic Theming
