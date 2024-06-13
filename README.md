@@ -8,10 +8,10 @@ This repository is a step by step utilization of **Angular Theming** using mixin
 
 
 ## 📃 Procedures
-[ ] Create New Application in Angular
-[ ] Install and Setup Angular Material
-[ ] Download Palette provided or Create Your Own
-[ ] Implement Basic Theming
+- [ ] Create New Application in Angular
+- [ ] Install and Setup Angular Material
+- [ ] Download Palette provided or Create Your Own
+- [ ] Implement Basic Theming
 
 ### 1. Create New Application in Angular
 Create a new web application using Angular CLI
@@ -25,12 +25,13 @@ To install angular material using Angular CLI:
 ng add @angular/material
 ```
 This will automatically detects which angular material your application is compatible with.
-![alt text]()
+
+![Screenshot 2024-06-14 054556](https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/images/Screenshot%202024-06-14%20054556.png)
 
 
 
 ### 3. Download Palette provided or Create Your Own
-To download Manulife's palette.scss go (here)[] or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
+To download/copy Manulife's palette.scss go (here)[https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/shared/_palette.scss] or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
 
 
 ### 4. Implement Basic Theming
