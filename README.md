@@ -19,6 +19,7 @@ Create a new web application using Angular CLI
 ng new ANGULAR-MATERIAL-BASIC-THEMING
 ```
 <br />
+
 ### 2. Install and Setup Angular Material
 To install angular material using Angular CLI:
 ```
@@ -32,10 +33,12 @@ This will automatically detects which angular material your application is compa
 
 
 <br />
+
 ### 3. Download Palette provided or Create Your Own
 To download/copy Manulife's palette.scss go [here](https://github.com/labisda/angular-material-basic-theming/blob/master/src/assets/shared/_palette.scss) or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
 
 <br />
+
 ### 4. Implement Basic Theming
 Go to your style.scss
 
