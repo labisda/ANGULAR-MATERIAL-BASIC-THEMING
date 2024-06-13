@@ -1,1 +1,40 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+@use '@angular/material' as mat;
+@use '/src/assets/shared/palette' as palette;
+
+@include mat.core();
+
+$angular-material-basic-theming-primary: mat.define-palette(palette.$greenCore, green5, green6, green7);
+$angular-material-basic-theming-accent: mat.define-palette(palette.$coralAccent, coral5, coral6, coral7);
+
+// The warn palette is optional (defaults to red).
+$angular-material-basic-theming-warn: mat.define-palette(palette.$coralAccent, coral5, coral6, coral7);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-material-basic-theming-theme: mat.define-light-theme((
+            color: (
+                primary: $angular-material-basic-theming-primary,
+                accent: $angular-material-basic-theming-accent,
+                warn: $angular-material-basic-theming-warn,
+            )
+        ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angular-material-basic-theming-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

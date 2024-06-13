@@ -1,27 +1,69 @@
-# AngularMaterialBasicTheming
+# 🎯 Basic Theming in Angular Material 🎯
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+## 👋 Introduction
+This repository is a step by step utilization of **Angular Theming** using mixins. The palettes was created based on Manulife's color branding.
 
-## Development server
+> ✏️ Note
+> The application is using **angular@14.2.13** and **angular/material@13.0.0**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## 📃 Procedures
+[ ] Create New Application in Angular
+[ ] Install and Setup Angular Material
+[ ] Download Palette provided or Create Your Own
+[ ] Implement Basic Theming
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1. Create New Application in Angular
+Create a new web application using Angular CLI
+```
+ng new ANGULAR-MATERIAL-BASIC-THEMING
+```
 
-## Build
+### 2. Install and Setup Angular Material
+To install angular material using Angular CLI:
+```
+ng add @angular/material
+```
+This will automatically detects which angular material your application is compatible with.
+![alt text]()
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Download Palette provided or Create Your Own
+To download Manulife's palette.scss go (here)[] or you can also create your own using [Angular Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 4. Implement Basic Theming
+Go to your style.scss
 
-## Further help
+Import angular material and the pallete you created/copied then modify it based on the pallete.scss filepath. 
+```
+@use '@angular/material' as mat;
+@use '/src/assets/shared/palette' as palette; 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@include mat.core();
+```
+
+Create basic theming
+```
+$angular-material-basic-theming-primary: mat.define-palette(palette.$greenCore, green5, green6, green7);
+$angular-material-basic-theming-accent: mat.define-palette(palette.$coralAccent, coral5, coral6, coral7);
+
+// The warn palette is optional (defaults to red).
+$angular-material-basic-theming-warn: mat.define-palette(palette.$coralAccent, coral5, coral6, coral7);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-material-basic-theming-theme: mat.define-light-theme((
+            color: (
+                primary: $angular-material-basic-theming-primary,
+                accent: $angular-material-basic-theming-accent,
+                warn: $angular-material-basic-theming-warn,
+            )
+        ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angular-material-basic-theming-theme);
+```
